@@ -3,6 +3,7 @@ int appWidth, appHeight;
 final color backgroundColor = color(255, 255, 255);
 final color Xcolor = color(255, 100, 100);
 final color Ocolor = color(100, 100, 255);
+final color gridColor=#0D0606;
 //
 final int Xsize = 60;
 final int ANNOUNCE_SIZE = 30;
@@ -40,11 +41,11 @@ void setup() {
 }
 void draw() { 
   background(backgroundColor);
-//  announce();
+   XO();
   displayGrid();
   drawOX();
  // displayScore();
-
+check();
   if (gameDone) {
     noLoop();
   }

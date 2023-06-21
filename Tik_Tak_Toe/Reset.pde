@@ -1,7 +1,7 @@
 void start_program() {
-  for (int i = 0; i < 3; i++) {
-    for (int j = 0; j < 3; j++) {
-      board[i][j] = EMPTY;
+  for (int row = 0; row < 3; row++) {
+    for (int col = 0; col < 3; col++) {
+      board[row][col] = EMPTY;
     }
   }
 

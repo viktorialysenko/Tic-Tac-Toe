@@ -5,6 +5,9 @@ void population() {
  middleX = appWidth* scaleWidth;
  middleY = appHeight * scaleHeight;
  //
+ squareWidth=lineWidth*1/3;
+ squareHeight=lineWidth*1/3;
+ //
  lineWidth= appWidth*1/2;
  lineHeight= appHeight*1/2;
  //

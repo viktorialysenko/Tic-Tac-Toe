@@ -2,7 +2,7 @@ void displayGrid () {
   // display grid
   stroke(#000000);
   strokeWeight(5);
-// for (int i = 0; i < 2; i++) {
+  //
   color(#030000);
    line(horLine1X1, horLine1Y1, horLine1X2, horLine1Y2);
    line(horLine2X1, horLine2Y1, horLine2X2, horLine2Y2);
