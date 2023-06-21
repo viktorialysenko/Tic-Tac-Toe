@@ -13,7 +13,7 @@ void display(){
       appHeight=0;
       println("STOP, is broken");
     } else {
-      //Empty ELSE
+      //empty ELSE
     }
     if ( appWidth >= appHeight ) { 
     smallerDimension = appHeight;

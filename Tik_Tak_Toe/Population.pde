@@ -5,15 +5,20 @@ void population() {
  middleX = appWidth* scaleWidth;
  middleY = appHeight * scaleHeight;
  //
- squareWidth=lineWidth*1/3;
- squareHeight=lineWidth*1/3;
- //
- lineWidth= appWidth*1/2;
+  lineWidth= appWidth*1/2;
  lineHeight= appHeight*1/2;
  //
- gridStartX=int(horLine1X1);
- gridStartY=int(vertLine1Y1);
- squareSize=int(lineWidth*1/3);
+ appHeightFloat= height;
+ appWidthFloat= width;
+ //
+  squareWidth=lineWidth*1/3;
+ squareHeight=lineHeight*1/3;
+ squareCellWidth = int(squareWidth);
+ squareCellHeight =int(squareHeight);
+ topMargin = (height - int(lineHeight)) / 2;
+ sideMargin = (width - int(lineWidth)) / 2;
+
+ //
  //
  horLine1X1=middleX-lineWidth*1/2;
  horLine1Y1=middleY - lineHeight*1/6;
@@ -34,4 +39,9 @@ void population() {
  vertLine2Y1=vertLine1Y1;
  vertLine2X2=vertLine2X1;
  vertLine2Y2=vertLine1Y2;
+ /// 
+ restartButtonX=sideMargin ;
+ restartButtonY=appHeight - topMargin*3/4;
+ restartButtonWidth= 3 * squareCellWidth;
+ restartButtonHeight=topMargin*1/2;
 }//End Population
