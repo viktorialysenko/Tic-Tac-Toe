@@ -26,7 +26,6 @@ int checks() {
       return X;
     }
   }
-
   // DIAGONAL 1 check
   if (board[0][0] == O && board[1][1] == O && board[2][2] == O) {
     line(sideMargin, topMargin, appWidth - sideMargin, appHeight - topMargin);

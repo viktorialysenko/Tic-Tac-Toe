@@ -9,12 +9,13 @@ final color gridColor=#0D0606;
 color targetColor=0;
 color currentColor=0;
 float amount=0;
+float poweredByX,poweredByY,poweredByWidth, poweredByHeight;
 //
 int squareCellWidth, squareCellHeight, topMargin, sideMargin;
 final int Xsize = 60;
 final int strokeSize = 55;
 //
-PFont microsoft,gothic;
+PFont microsoft,gothic, lucida;
 
 final int empty = -1;
 final int X = 0;
@@ -39,25 +40,31 @@ boolean gameDone = false;
 void setup() {
      size(1000, 800);
       gothic = createFont("Jokerman", 48);
+      lucida = createFont("Garamond", 48, false);
   appWidth = width;
    appHeight = height;
    population();
-   display();
+     display();
   start_program();
-  displayGrid();
  
 }
 void draw() { 
+  background(#FFFFFF);
  if (random(1)<0.03) {
     currentColor=lerpColor(currentColor, targetColor, amount);
-    targetColor=color(random(200), random(50), random(200));
+    targetColor=color(random(180,235), random(170,235), random(180,235));
     amount=0;
   }
-
   if (amount<1) {
     amount+=0.01;
   }
   background(lerpColor(currentColor, targetColor, amount));
+  ////
+    textAlign(CENTER, CENTER); 
+  textFont(lucida, 20 );
+  fill(black);
+  text("©powered by viktorialysenko on GitHub",poweredByX,poweredByY,poweredByWidth, poweredByHeight);
+  ////
   displayGrid();
   drawOX();
  score();
@@ -74,7 +81,6 @@ void keyPressed() {
       start_program();
     }
   }
-  
 }//End KeyPressed
 void mousePressed() {
     // print(mouseX, mouseY);
@@ -82,7 +88,7 @@ void mousePressed() {
     mouseY > topMargin && mouseY < appHeight - topMargin) {
     int ix = (mouseX - sideMargin) / squareCellWidth;
     int iy = (mouseY - topMargin) / squareCellHeight; 
-
+ if (!gameDone){
     if (board[ix][iy] == empty) {
       if (turn % 2 == O) {
         board[ix][iy] = O;
@@ -94,12 +100,8 @@ void mousePressed() {
       turn += 1;
     }
   }
+    }
+  
+   buttonPressed();
   ///////restart
-    loop();
-  if (mouseX > restartButtonX && mouseX < restartButtonX +restartButtonWidth &&
-    mouseY > restartButtonY && mouseY < restartButtonY + restartButtonHeight) {
-     if (gameDone) {
-       start_program();
-  }
-    }//END IF
 }//End MousePressed

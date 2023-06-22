@@ -1,5 +1,5 @@
 void drawOX() {
-    microsoft = createFont("MicrosoftYaHeiUI-Bold", 48);
+  microsoft = createFont("Myanmar", 48);
   textAlign(CENTER, CENTER); 
   textFont(microsoft, 85);
   for (int y = 0; y < 3; y++) {

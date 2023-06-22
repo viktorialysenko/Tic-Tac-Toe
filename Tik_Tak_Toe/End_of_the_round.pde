@@ -8,12 +8,14 @@ void endOfTheRound() {
        println("O wins");
       fill(black);
       text("O wins", sideMargin, 0, 3 * squareCellWidth, topMargin);
-      Oscore++;
+       if (!gameDone){
+         Oscore++;
+       }
     } else if (checks() == X) {
        println("X wins");
       fill(black);
       text("X wins", sideMargin, 0, 3 * squareCellWidth, topMargin);
-      Xscore++;
+     if (!gameDone){ Xscore++;}
     } else {
       text("Draw", sideMargin, 0, 3 * squareCellWidth, topMargin);
     }
@@ -32,4 +34,13 @@ fill(black);
       text("X's turn", sideMargin, 0, 3 * squareCellWidth, topMargin);
     }
   }
-}
+}//End endOfTheRound
+ void buttonPressed(){
+loop();
+   if (mouseX > restartButtonX && mouseX < restartButtonX +restartButtonWidth &&
+    mouseY > restartButtonY && mouseY < restartButtonY + restartButtonHeight) {
+     if (gameDone) {
+       start_program();
+  }
+    }//END IF
+ }//END buttonPressed

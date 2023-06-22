@@ -17,8 +17,12 @@ void population() {
  squareCellHeight =int(squareHeight);
  topMargin = (height - int(lineHeight)) / 2;
  sideMargin = (width - int(lineWidth)) / 2;
-
  //
+ poweredByWidth=appWidth*1/3;
+ poweredByHeight=topMargin*1/3;
+ poweredByX=appWidth-poweredByWidth;
+ poweredByY=appHeight-poweredByHeight;
+
  //
  horLine1X1=middleX-lineWidth*1/2;
  horLine1Y1=middleY - lineHeight*1/6;

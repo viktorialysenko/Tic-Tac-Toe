@@ -2,7 +2,6 @@ void display(){
   println("\t\t\tWidth="+width, "\tHeight="+height);
   println("Display Monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
   //
-  String ls="Landscape or Square", p="portrait", DO="Display Orientation";
   //
   if ( appWidth < appHeight ) {
     println("Please, turn your phone");
